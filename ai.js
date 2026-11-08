@@ -113,6 +113,7 @@
         const msg = (j.error && j.error.message) || r.status;
         out.className = "aiB e";
         out.textContent = r.status === 401 ? "المفتاح غير صالح أو منتهي." :
+          (j.error && j.error.code === "billing_not_active") ? "حساب OpenAI محتاج رصيد/تفعيل فاتورة عشان المساعد يشتغل." :
           r.status === 429 ? "تجاوزنا الحد أو الرصيد غير كافٍ." :
           "خطأ من OpenAI: " + msg;
         return;

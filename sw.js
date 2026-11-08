@@ -1,4 +1,4 @@
-const V='nexus-v2',SHELL=['./','index.html','ai.js','config.js','manifest.webmanifest','icon.svg','icon-192.png','icon-512.png','data.json'];
+const V='nexus-v3',SHELL=['./','index.html','ai.js','config.js','manifest.webmanifest','icon.svg','icon-192.png','icon-512.png','data.json'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(V).then(c=>c.addAll(SHELL)).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==V).map(x=>caches.delete(x)))).then(()=>self.clients.claim()))});
 const put=(r,x)=>{if(x&&(x.ok||x.type==='opaque'))caches.open(V).then(c=>c.put(r,x.clone()));return x};
