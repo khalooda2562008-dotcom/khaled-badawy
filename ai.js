@@ -6,7 +6,7 @@
   const $ = (s, r = document) => r.querySelector(s);
 
   const css = `
-  #aiF{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:19;display:inline-flex;align-items:center;gap:8px;min-height:52px;padding:0 18px;border-radius:99px;border:0;font:inherit;font-weight:800;cursor:pointer;color:#05060d;background:linear-gradient(135deg,var(--ac),var(--ac2));box-shadow:0 18px 40px -14px var(--ac)}
+  #aiF{position:fixed;right:16px;bottom:calc(72px + env(safe-area-inset-bottom,0px));z-index:19;display:inline-flex;align-items:center;gap:8px;min-height:52px;padding:0 18px;border-radius:99px;border:0;font:inherit;font-weight:800;cursor:pointer;color:#05060d;background:linear-gradient(135deg,var(--ac),var(--ac2));box-shadow:0 18px 40px -14px var(--ac)}
   #aiP{position:fixed;z-index:40;inset:auto 0 0 0;height:76vh;max-height:640px;display:none;flex-direction:column;background:var(--bg2);border:1px solid var(--bd);border-radius:22px 22px 0 0;box-shadow:0 -20px 60px rgba(0,0,0,.65);overflow:hidden}
   #aiP.o{display:flex}
   @media(min-width:900px){#aiP{inset:auto 24px 24px auto;width:400px;height:70vh;border-radius:22px}}
